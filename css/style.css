@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* Reset */
+* {
+  /* to ensure all the container using webpage size and control margin and padding easily */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  /* line-height to spread things out lil bit */
+  line-height: 1.6;
+}
+
+ul {
+  /* for without any bullet point */
+  list-style-type: none;
+}
+
+a {
+  /* to remove ugly underline on the link */
+  text-decoration: none;
+  color: #333;
+}
+
+/* setup the headings */
+h1,
+h2 {
+  /* for making less bold */
+  font-weight: 300;
+  /* line-height for making pretty look */
+  line-height: 1.2;
+  /* setup margin top and bottom 10px and left right 0px */
+  margin: 10px 0;
+}
+
+/* setup paragraph similiar to headings */
+p {
+  margin: 10px 0;
+}
+
+/* set the images that has width similiar to the parent container */
+img {
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+/* styling the nav bar*/
+.navbar {
+  background-color: #047aed;
+  color: #fff;
+  height: 70px;
+}
+
+/*  set the link into white color in the navbar   */
+.navbar a {
+  color: #fff;
+  /* make a break on each items */
+  padding: 10px;
+  margin: 0 5px;
+}
+
+/* create a hover effect on the navbar */
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+/* if flex in the navbar, so it would be using space-between */
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* set the container that wides has selected range, and not following whole web page few and its will turn responsiveness */
+/* to make clean point when you stretch the window */
+/* and margin zero auto will be set for automatically respons to wide range of webpage */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* fixing the margin10px by headings above, so this container has no margin */
+  overflow: auto;
+  /* set the padding so they have space within its container, and to push left and right */
+  padding: 0 40px;
+}
+
+/* setup the container and navbar into flexbox so we could easily manage them into flex items & grid with desire direction */
+/* add the utility class flex on the html beside container, so it will manage navbar using flexbox */
+.flex {
+  /* this display flex will turn items into colom */
+  display: flex;
+  /* to ensure webname and navbar separately arrange */
+  /* justify-content using space between to make the both item separately position themself on each start and ends of the container */
+  justify-content: center;
+  align-items: center;
+  /* make sure the height turn into 100% of whatever the container is */
+  height: 100%;
+}
