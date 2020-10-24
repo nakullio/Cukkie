@@ -3,6 +3,9 @@
 /* Create CSS Properties */
 :root {
   --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
 }
 /* --------------------------------------------------- */
 /* Reset */
@@ -170,4 +173,39 @@ img {
 /* Stats */
 .stats {
   padding-top: 100px;
+}
+
+.stats-heading {
+  /* to squize in the middle from major container */
+  max-width: 500px;
+  margin: auto;
+}
+/* decoring the stats h3 and paragraph */
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* cli */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* to expand the cli image on first 2 row and two colom */
+/* using this ">" bracket to target everything(*) that in(:) the first-child */
+.cli .grid > *:first-child {
+  /* this grid column will fill from 1 and span untul column 2 */
+  grid-column: 1 / span 2;
+  /* then targeting the second part is spaning row */
+  grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
 }

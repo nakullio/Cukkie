@@ -45,6 +45,55 @@
   transform: scale(0.98);
 }
 
+/* adding bg primary */
+/* Backgrounds & Coloured buttons */
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+
+/* Text Sizes  */
+.lead {
+  /* will change the paragraph font size */
+  font-size: 20px;
+}
+
+/* then for small medium */
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -77,4 +126,106 @@
 /* Grid-3 was to set the stats grid into 3 colom instead 2 */
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+/* Margin */
+.my-1 {
+  /* rem is the multiplier root element for font size*/
+  margin: 1rem 0;
+}
+
+.my-2 {
+  /* rem is the multiplier root element for font size*/
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  /* rem is the multiplier root element for font size*/
+  margin: 2rem 0;
+}
+
+.my-4 {
+  /* rem is the multiplier root element for font size*/
+  margin: 3rem 0;
+}
+
+.my-5 {
+  /* rem is the multiplier root element for font size*/
+  margin: 4rem 0;
+}
+
+.m-1 {
+  /* rem is the multiplier root element for font size*/
+  margin: 1rem 0;
+}
+
+.m-2 {
+  /* rem is the multiplier root element for font size*/
+  margin: 1.5rem 0;
+}
+
+.m-3 {
+  /* rem is the multiplier root element for font size*/
+  margin: 2rem 0;
+}
+
+.m-4 {
+  /* rem is the multiplier root element for font size*/
+  margin: 3rem 0;
+}
+
+.m-5 {
+  /* rem is the multiplier root element for font size*/
+  margin: 4rem 0;
+}
+
+/* Padding */
+.py-1 {
+  /* rem is the multiplier root element for font size*/
+  padding: 1rem 0;
+}
+
+.py-2 {
+  /* rem is the multiplier root element for font size*/
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  /* rem is the multiplier root element for font size*/
+  padding: 2rem 0;
+}
+
+.py-4 {
+  /* rem is the multiplier root element for font size*/
+  padding: 3rem 0;
+}
+
+.py-5 {
+  /* rem is the multiplier root element for font size*/
+  padding: 4rem 0;
+}
+
+.p-1 {
+  /* rem is the multiplier root element for font size*/
+  padding: 1rem 0;
+}
+
+.p-2 {
+  /* rem is the multiplier root element for font size*/
+  padding: 1.5rem 0;
+}
+
+.p-3 {
+  /* rem is the multiplier root element for font size*/
+  padding: 2rem 0;
+}
+
+.p-4 {
+  /* rem is the multiplier root element for font size*/
+  padding: 3rem 0;
+}
+
+.p-5 {
+  /* rem is the multiplier root element for font size*/
+  padding: 4rem 0;
 }
