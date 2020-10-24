@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
+/* Create CSS Properties */
+:root {
+  --primary-color: #047aed;
+}
+/* --------------------------------------------------- */
 /* Reset */
 * {
   /* to ensure all the container using webpage size and control margin and padding easily */
@@ -7,6 +12,8 @@
   padding: 0;
   margin: 0;
 }
+
+/* --------------------------------------------------- */
 
 body {
   font-family: "Lato", sans-serif;
@@ -47,13 +54,14 @@ img {
   width: 100%;
 }
 
+/* Navbar Styling */
 .navbar ul {
   display: flex;
 }
 
 /* styling the nav bar*/
 .navbar {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   color: #fff;
   height: 70px;
 }
@@ -76,6 +84,92 @@ img {
   justify-content: space-between;
 }
 
+/* Showcase */
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  /* to set the fontsize bigger for showcase */
+  font-size: 40px;
+}
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  /* make it approach by percentage as the container grid */
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  /* to setup the card height visible above showcase grid container */
+  overflow: visible;
+}
+
+.showcase-form {
+  /* setup & styling the form */
+  /* relative to make this at the top of property */
+  position: relative;
+  /* to push down */
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  /* to ensure the card always position himself at the front */
+  z-index: 100;
+  /* to push the form to the right */
+  justify-self: flex-end;
+}
+
+/* setup form control that wrap the input */
+.showcase-form .form-control {
+  /* separate the form */
+  margin: 30px 0;
+}
+
+/* style the actual input and the button with targeting only input type "text and "email"*/
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  /* taking away the border */
+  border: 0;
+  /* instead changing just styled border bottom */
+  border-bottom: 1px solid #b4becb;
+  /* set the width into 100% so its go all the way across parent container */
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+/* taking out the original format of border when click input */
+.showcase-form input:focus {
+  outline: none;
+}
+
+/* Create the slice part: instead of adding new element on the html, we setup the pseoudo character */
+.showcas::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  /* to occupy all web type and model, we setup prefix version the transform into several media webkit */
+  /* for Chrome and Safari */
+  -webkit-transform: skewY(-3deg);
+  /* for Mozila */
+  -moz-transform: skewY(-3deg);
+  /* microsoft */
+  -ms-transform: skewY(-3deg);
+}
+
+/* --------------------------------------------------- */
+/* This the utilities  */
+
 /* set the container that wides has selected range, and not following whole web page few and its will turn responsiveness */
 /* to make clean point when you stretch the window */
 /* and margin zero auto will be set for automatically respons to wide range of webpage */
@@ -88,6 +182,38 @@ img {
   padding: 0 40px;
 }
 
+/* setup the card class */
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  /* create box shadow with 0 margin 3px wide and 10px blur, the the color with rgba opa 0.2 */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* styling the button */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+/* setup the hover effect on button */
+.btn:hover {
+  transform: scale(0.98);
+}
+
 /* setup the container and navbar into flexbox so we could easily manage them into flex items & grid with desire direction */
 /* add the utility class flex on the html beside container, so it will manage navbar using flexbox */
 .flex {
@@ -98,5 +224,17 @@ img {
   justify-content: center;
   align-items: center;
   /* make sure the height turn into 100% of whatever the container is */
+  height: 100%;
+}
+
+/* Create a grid to align side by side on the Showcase model */
+.grid {
+  display: grid;
+  /* setup how wide we wanna setup the grid colum inside one row, and set the wide using fraction (Fr) instead, like the percentage inside the container*/
+  grid-template-columns: repeat(2, 1fr);
+  /* because the initial fraction on grid doesnt have a space, we add gap in it */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }

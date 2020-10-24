@@ -10,13 +10,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Lorukki | Cloud Hosting for Everyone</title>
+    <title>Cukkie | Cloud Hosting for Everyone</title>
   </head>
   <body>
     <!-- Navbar-->
     <div class="navbar">
       <div class="container flex">
-        <h1 class="logo">Lorukki.</h1>
+        <h1 class="logo">Cukkie.</h1>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -26,5 +26,53 @@
         </nav>
       </div>
     </div>
+
+    <!-- Showcase for different view settings-->
+    <section class="showcase">
+      <div class="container grid">
+        <div class="showcase-text">
+          <h1>Easier Deployment</h1>
+          <p>
+            Deploy web apps of all kinds, from large scale enterprise APIs to
+            static websites for individuals. Fill out the form to try demo of
+            our platform
+          </p>
+          <!--we gonna set the link on the button format under the paragraph-->
+          <a href="features.html" class="btn btn-outline">Read More</a>
+        </div>
+        <!-- this card with the background color and padding stuff using bootstrap card an form-->
+        <div class="showcase-form card">
+          <h2>Request a Demo</h2>
+          <!-- we dont need action on this form-->
+          <!-- adding required for simple validation  -->
+          <form>
+            <div class="form-control">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-control">
+              <input
+                type="text"
+                name="company"
+                placeholder="Company Name"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <!-- we need the button-->
+            <input type="submit" value="Send" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- let's working on Stats-->
+    <section class="stats">
+      <div class="container">
+        <!--my-1 stand for margin top and bottom 1, (mx for horizontal, m for marginal around) and text-center class is going to center the text-->
+        <h3 class="stats-heading text-center my-1"></h3>
+      </div>
+    </section>
   </body>
 </html>
