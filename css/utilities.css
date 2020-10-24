@@ -1,0 +1,80 @@
+/* --------------------------------------------------- */
+/* This the utilities  */
+
+/* set the container that wides has selected range, and not following whole web page few and its will turn responsiveness */
+/* to make clean point when you stretch the window */
+/* and margin zero auto will be set for automatically respons to wide range of webpage */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* fixing the margin10px by headings above, so this container has no margin */
+  overflow: auto;
+  /* set the padding so they have space within its container, and to push left and right */
+  padding: 0 40px;
+}
+
+/* setup the card class */
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  /* create box shadow with 0 margin 3px wide and 10px blur, the the color with rgba opa 0.2 */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* styling the button */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+/* setup the hover effect on button */
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* setup the container and navbar into flexbox so we could easily manage them into flex items & grid with desire direction */
+/* add the utility class flex on the html beside container, so it will manage navbar using flexbox */
+.flex {
+  /* this display flex will turn items into colom */
+  display: flex;
+  /* to ensure webname and navbar separately arrange */
+  /* justify-content using space between to make the both item separately position themself on each start and ends of the container */
+  justify-content: center;
+  align-items: center;
+  /* make sure the height turn into 100% of whatever the container is */
+  height: 100%;
+}
+
+/* Create a grid to align side by side on the Showcase model */
+.grid {
+  display: grid;
+  /* setup how wide we wanna setup the grid colum inside one row, and set the wide using fraction (Fr) instead, like the percentage inside the container*/
+  grid-template-columns: repeat(2, 1fr);
+  /* because the initial fraction on grid doesnt have a space, we add gap in it */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Grid-3 was to set the stats grid into 3 colom instead 2 */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
