@@ -120,6 +120,11 @@ pre {
   overflow: visible;
 }
 
+.showcase-text {
+  /* sets animation for sliding left with duration 1 seconds and moving ease in */
+  animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form {
   /* setup & styling the form */
   /* relative to make this at the top of property */
@@ -133,6 +138,8 @@ pre {
   z-index: 100;
   /* to push the form to the right */
   justify-self: flex-end;
+  /* sets the animation page start */
+  animation: slideInFromRight 1s ease-in;
 }
 
 /* setup form control that wrap the input */
@@ -182,6 +189,7 @@ pre {
 /* Stats */
 .stats {
   padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
 }
 
 .stats-heading {
@@ -331,12 +339,16 @@ pre {
     text-align: center;
     /* set margin to push down */
     margin-top: 40px;
+    /* sets animation */
+    animation: slideInFromTop 1s ease-in;
   }
 
   .showcase-form {
     /* to set justify all element by itself */
     justify-self: auto;
     margin: auto;
+    /* sets animation */
+    animation: slideInFromBottom 1s ease-in;
   }
 
   /* instead of spanning we just set grid colum to 1 and grid row to 1 */
@@ -360,6 +372,51 @@ pre {
   .features-main .grid > *:first-child,
   .features-main .grid > *:nth-child(2) {
     grid-column: 1;
+  }
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    /* to basically start off the screen, we define transform translatex to -100% (coming from the left) */
+    transform: translateX(-100%);
+  }
+  /* sets endup animation with 0 as its normal position*/
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    /* to basically start off the screen, we define transform translatex to 100% (coming from the right) */
+    transform: translateX(100%);
+  }
+  /* sets endup animation with 0 as its normal position*/
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    /* to basically start off the screen, we define transform translatey to -100% (coming from the top) */
+    transform: translateY(-100%);
+  }
+  /* sets endup animation with 0 as its normal position*/
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    /* to basically start off the screen, we define transform translatey to 100% (coming from the buttom) */
+    transform: translateY(100%);
+  }
+  /* sets endup animation with 0 as its normal position*/
+  100% {
+    transform: translateX(0);
   }
 }
 
