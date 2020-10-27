@@ -66,6 +66,12 @@ pre {
   padding: 10px;
 }
 
+.hidden {
+  visibility: hidden;
+  /* for not taking any space, set height zero */
+  height: 0;
+}
+
 /* Navbar Styling */
 .navbar ul {
   display: flex;
