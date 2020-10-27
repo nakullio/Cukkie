@@ -166,22 +166,22 @@
 
 .m-1 {
   /* rem is the multiplier root element for font size*/
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .m-2 {
   /* rem is the multiplier root element for font size*/
-  margin: 1.5rem 0;
+  margin: 1.5rem;
 }
 
 .m-3 {
   /* rem is the multiplier root element for font size*/
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .m-4 {
   /* rem is the multiplier root element for font size*/
-  margin: 3rem 0;
+  margin: 3rem;
 }
 
 .m-5 {
@@ -217,25 +217,25 @@
 
 .p-1 {
   /* rem is the multiplier root element for font size*/
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .p-2 {
   /* rem is the multiplier root element for font size*/
-  padding: 1.5rem 0;
+  padding: 1.5rem;
 }
 
 .p-3 {
   /* rem is the multiplier root element for font size*/
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .p-4 {
   /* rem is the multiplier root element for font size*/
-  padding: 3rem 0;
+  padding: 3rem;
 }
 
 .p-5 {
   /* rem is the multiplier root element for font size*/
-  padding: 4rem 0;
+  padding: 4rem;
 }

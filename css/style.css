@@ -234,6 +234,64 @@ img {
   transform: translateY(-15px);
 }
 
+/* Features */
+.features-head img,
+.docs-head img {
+  width: 200px;
+  /* this justify self will justify itself only and flex-end will push them into end of the grid container */
+  justify-self: flex-end;
+}
+
+.features-sub-head img {
+  width: 300px;
+  /* this justify self will justify itself only and flex-end will push them into end of the grid container */
+  justify-self: flex-end;
+}
+
+.features-main .card > i {
+  /* add the margin on the icon */
+  margin-right: 20px;
+}
+
+.features-main .grid {
+  padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+  /* take span on the fisrt card across all three */
+  grid-column: 1 / span 3;
+}
+
+/* target universal on next child by nth-child(this gonna be the child number) */
+.features-main .grid > *:nth-child(2) {
+  /* take span on the second card across all two */
+  grid-column: 1 / span 2;
+}
+
+/* Docs */
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  /* make the first card 1 fr and second 2fr */
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  /* design the navigation */
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+  /* create hover animation on the link */
+  font-weight: bold;
+}
+
 /* Footer */
 .footer .social a {
   margin: 0 10px;
@@ -241,9 +299,40 @@ img {
 
 /* setup for media query */
 /* Tablet and under */
-@media (max-width: 786px) {
-  body {
-    display: none;
+@media (max-width: 768px) {
+  /* to create only one colum */
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    /* to pushdown showcase in 1fr mode (mobile) */
+    height: auto;
+  }
+
+  .showcase-text {
+    /* set text to center */
+    text-align: center;
+    /* set margin to push down */
+    margin-top: 40px;
+  }
+
+  .showcase-form {
+    /* to set justify all element by itself */
+    justify-self: auto;
+    margin: auto;
+  }
+
+  /* instead of spanning we just set grid colum to 1 and grid row to 1 */
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
   }
 }
 
